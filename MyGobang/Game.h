@@ -26,13 +26,13 @@ namespace MyGobang {
 
 		void init();
 
-		void show();
+		void show(); // 展示棋盘现状
 		
 	private:
-		bool Checkover();
+		bool Checkover(); // 只需从lastpos开始检查是否结束即可
 		Player *early, *late;
 		std::vector<std::string> board;
-		ChessPos *lastpos;
+		ChessPos *lastpos; // 传入Player的ChessDown函数，以记录最后一次的落子位置
 	};
 }
 

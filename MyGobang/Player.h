@@ -18,7 +18,7 @@ namespace MyGobang {
 		virtual void init();
 	
 	private:
-		void thinking(const std::vector<std::string>& board);
+		void thinking(const std::vector<std::string>& board); //计算score数组，并决定下一步落子在哪
 		std::vector<std::vector<int>> score;
 	};
 
