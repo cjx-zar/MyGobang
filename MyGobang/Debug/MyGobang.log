@@ -1,0 +1,10 @@
+﻿  Game.cpp
+d:\myprojects\mygobang\mygobang\mygobang\game.cpp(62): warning C4018: “<”: 有符号/无符号不匹配
+  Player.cpp
+d:\myprojects\mygobang\mygobang\mygobang\player.cpp(18): warning C4018: “<”: 有符号/无符号不匹配
+d:\myprojects\mygobang\mygobang\mygobang\player.cpp(19): warning C4018: “<”: 有符号/无符号不匹配
+  main.cpp
+  正在生成代码...
+Game.obj : error LNK2019: 无法解析的外部符号 "int __cdecl MyGobang::MaxCountOneLine(class std::vector<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::allocator<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > > const &,int,int,char)" (?MaxCountOneLine@MyGobang@@YAHABV?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@std@@HHD@Z)，该符号在函数 "private: bool __thiscall MyGobang::Game::Checkover(void)" (?Checkover@Game@MyGobang@@AAE_NXZ) 中被引用
+Player.obj : error LNK2001: 无法解析的外部符号 "int __cdecl MyGobang::MaxCountOneLine(class std::vector<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::allocator<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > > const &,int,int,char)" (?MaxCountOneLine@MyGobang@@YAHABV?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@std@@HHD@Z)
+D:\MyProjects\MyGobang\MyGobang\Debug\MyGobang.exe : fatal error LNK1120: 1 个无法解析的外部命令

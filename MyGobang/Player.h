@@ -1,31 +1,33 @@
 #ifndef __MYGOBANG_PLAYER_H__
 #define __MYGOBANG_PLAYER_H__
 
-#include "Game.h"
+#include <numeric>
 #include <vector>
 
 namespace MyGobang {
+	class ChessPos;
+
 	class Player {
 	public:
-		virtual bool ChessDown(std::vector<std::string>& board) = 0;
-		virtual void init() = 0;
+		virtual ChessPos* ChessDown(std::vector<std::string>& board) = 0;
+	protected:
+		bool eorl;				// 先后手标记
 	};
-
 
 	class AI : public Player {
 	public:
-		virtual bool ChessDown(std::vector<std::string>& board);
-		virtual void init();
+		AI(bool flag) { eorl = flag; score.resize(10); std::iota(score.begin(), score.end(), 0); }
+		virtual ChessPos* ChessDown(std::vector<std::string>& board);
 	
 	private:
-		void thinking(const std::vector<std::string>& board); //计算score数组，并决定下一步落子在哪
-		std::vector<std::vector<int>> score;
+		ChessPos* thinking(const std::vector<std::string>& board); //决定下一步落子在哪
+		std::vector<int> score;
 	};
 
 	class Human : public Player {
 	public:
-		virtual bool ChessDown(std::vector<std::string>& board);
-		virtual void init() {}
+		Human(bool flag) { eorl = flag; }
+		virtual ChessPos* ChessDown(std::vector<std::string>& board);
 	};
 
 }
