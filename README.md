@@ -1,2 +1,2 @@
 # MyGobang
-My Simple C++ Gobang Project
+My Simple C++ Gobang Project.
